@@ -23,14 +23,14 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Router>
+        <Router basename='/React-NewsApp'>
           <Navbar />
           <LoadingBar
             color='#f11946'
             progress={this.state.progress}
           />
           <Routes>
-            <Route exact path="/" element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="general" pageSize={6} country="in" category="general" />}> </Route>
+            <Route exact path="/React-NewsApp" element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="general" pageSize={6} country="in" category="general" />}> </Route>
             <Route exact path="/business" element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="business" pageSize={6} country="in" category="business" />}></Route>
             <Route exact path="/entertainment" element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="entertainment" pageSize={6} country="in" category="entertainment" />}></Route>
             <Route exact path="/health" element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="health" pageSize={6} country="in" category="health" />}></Route>
